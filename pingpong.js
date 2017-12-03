@@ -109,6 +109,11 @@ document.addEventListener('keydown', function(e) {
 		ballData.y += ballData.yDelta;
 		if(document.getElementById('checkbox').checked)
 			playerData.player2.y = ballData.y - 50;
+		if(document.getElementById('checkbox2').checked)
+		{
+			playerData.player1.y = ballData.y - 50;
+			playerData.player2.y = ballData.y - 50;
+		}
 	};
 	
 	const  detectCollision = function()
