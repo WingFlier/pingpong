@@ -105,8 +105,10 @@ document.addEventListener('keydown', function(e) {
 	
 	const beginMovement = function() 
 	{
-		ballData.x += ballData.xDelta
-		ballData.y += ballData.yDelta
+		ballData.x += ballData.xDelta;
+		ballData.y += ballData.yDelta;
+		if(document.getElementById('checkbox').checked)
+			playerData.player2.y = ballData.y - 50;
 	};
 	
 	const  detectCollision = function()
